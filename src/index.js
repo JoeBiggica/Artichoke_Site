@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
 
 import Homepage from './components/Homepage';
 import Subpage from './components/Subpage';
+import Header from './header'
 
 export default class App extends Component {
 	render() {
@@ -12,11 +13,11 @@ export default class App extends Component {
 				<div>
 					<div>
 						<Link to='/'>Homepage</Link>
-						<Link to='/subpage'>Subpage</Link>
+						<Link to='/about'>About</Link>
 					</div>
 					<Switch>
 						<Route path='/' exact component={Homepage} />
-						<Route path='/subpage' exact component={Subpage} />
+						<Route path='/about' exact component={Subpage} />
 					</Switch>
 				</div>
 			</BrowserRouter>

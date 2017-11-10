@@ -1,28 +1,42 @@
-// Reset Foundation Row Width
-.row {
-	max-width: 128rem;
-}
+// The responsive breakpoints
+$narrow-browser-and-phone: (min-width 0px) (max-width 639px);
 
-// Mobile First Breakpoints //
-$bp-1681: 1681px; // xlarge-screens
-$bp-1281: 1281px; // large-screens
-$bp-1025: 1025px; // medium-screens
-$bp-801: 801px; // lsmall-screens
-$bp-641: 641px; // small-screens
-$bp-321: 321px; // xsmall-screens
+$landscape-phone: (min-width 568px) (max-width 639px);
 
-// Tablet //
-$bp-ipad-landscape: 1024px;
-$bp-ipad-portrait: 768px;
+$medium-browser-and-portrait-tablet: (min-width 640px) (max-width 919px);
 
-// iPhone 6+ //
-$bp-iphone6plus-landscape: 736px;
-$bp-iphone6plus-portrait: 414px;
+$landscape-tablet: (min-width 920px) (max-width 1280px);
 
-// iPhone 6 //
-$bp-iphone6-landscape: 667px;
-$bp-iphone6-portrait: 375px;
+$very-narrow-landscape-tablet: (min-width 920px) (max-width 1020px);
 
-// iPhone 5 => 4 //
-$bp-iphone5-landscape: 568px;
-$bp-iphone5-portrait: 320px;
+$narrow-landscape-tablet: (min-width 1020px) (max-width 1120px);
+
+$medium-browser-and-landscape-tablet: (min-width 640px) (max-width 1280px);
+
+$medium-wide-browser: (min-width 1281px) (max-width 1599px);
+
+$medium-wide-browser-and-larger: (min-width 1281px);
+
+$wide-browser-and-larger: (min-width 1600px);
+
+$above-phone: ($medium-browser-and-portrait-tablet, $medium-browser-and-landscape-tablet, $medium-wide-browser-and-larger);
+
+$portrait-tablet-and-above: ($medium-browser-and-portrait-tablet, $landscape-tablet, $medium-wide-browser-and-larger);
+
+$above-portrait-tablet: ($medium-browser-and-landscape-tablet, $medium-wide-browser, $wide-browser-and-larger);
+
+$landscape-tablet-and-above: ($landscape-tablet, $medium-wide-browser-and-larger);
+
+$landscape-tablet-and-medium-wide-browser: ($landscape-tablet, $medium-wide-browser);
+
+$portrait-tablet-and-below: ($medium-browser-and-portrait-tablet, $narrow-browser-and-phone);
+
+$landscape-tablet-and-below: ($medium-browser-and-landscape-tablet, $medium-browser-and-portrait-tablet, $narrow-browser-and-phone);
+
+// Handheld devices (portrait, landscape)
+$handheld: (min-device-width 320px) (max-device-width 736px) (orientation landscape);
+$handheld-device: ($narrow-browser-and-phone, $handheld);
+
+
+// Compact header media queries
+$media-query-compact-header: ($narrow-browser-and-phone, (max-height: 800px));

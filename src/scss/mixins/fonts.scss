@@ -1,7 +1,25 @@
-// Importing from Google Fonts // Roboto
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@mixin knowledge-light {
+	font-family: $knowledge-light;
+	-webkit-font-smoothing: antialiased;
+}
 
-.roboto {
-	font-family: 'Roboto', sans-serif;
+@mixin knowledge-regular {
+	font-family: $knowledge-regular;
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin knowledge-medium {
+	font-family: $knowledge-medium;
+	-webkit-font-smoothing: antialiased;
+	@include font-weight-override;
+}
+
+@mixin serif-regular {
+	font-family: $serif-regular;
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin serif-medium {
+	font-family: $serif-medium;
 	-webkit-font-smoothing: antialiased;
 }
