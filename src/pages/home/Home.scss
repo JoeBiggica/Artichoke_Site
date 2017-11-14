@@ -7,18 +7,121 @@
 		width: 100%;
 		height: 490px;
 		background: url('../../assets/images/Artichoke_Background.png') no-repeat center center;
-		background-size: cover;
+		background-size: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;		
 		justify-content: center;
+		border-bottom: 1px solid $artichoke-green;
 
 		.banner-text {
 			display: block;
-			@include gothic-bold();
+			@include gothic-bold;
 			font-size: 72px;
 			color: #fff;
 			text-shadow: 4px 4px 4px #000;
+		}
+	}
+
+	.cards-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 48px 60px;
+
+		.card {
+			width: 50%;
+			align-self: flex-start;
+
+			&:first-child {
+				margin-right: 10px;
+			}
+			
+			.inner {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+
+				.thumb {
+					width: 178px;
+					height: 178px;
+					flex: none;
+					margin-right: 20px;
+
+					&.expertise {
+						background: url('../../assets/images/Expertise_Checkmark.png') no-repeat center center;
+					}
+
+					&.blog-post {
+						background: url('../../assets/images/Expertise_Checkmark.png') no-repeat center center;
+					}
+				}
+
+				.info {
+					
+					.title {
+						@include gothic-bold;
+						font-size: 26px;
+					}
+
+					.description {
+						font-family: arial, sans-serif;
+						font-size: 14px;
+						padding-bottom: 10px;
+					}
+
+					.button {
+						@include gothic-bold;
+						font-size: 16px;
+						width: 99px;
+						height: 26px;
+						background: $background-grey;
+						padding: 4px 6px;
+						border-bottom: 3px solid $artichoke-green;
+						cursor: pointer;
+						transition: all .35s $easeOutExpo;
+
+						&:hover {
+							color: #fff;
+							background: $artichoke-green;
+							border-bottom: 3px solid $background-grey;
+						}
+					}
+				}	
+			}	
+		}
+	}
+
+	.your-story {
+		padding: 48px 60px;
+		background: $background-grey;
+
+		.inner {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			
+			.thumb {
+				width: 435px;
+				height: 290px;
+				flex: none;
+				margin-right: 30px;
+				background: url('../../assets/images/jean_claude.jpg') no-repeat center center;
+			}
+
+			.title {
+				@include gothic-bold;
+				font-size: 26px;
+			}
+
+			p {
+				font-family: arial, sans-serif;
+				font-size: 14px;
+				line-height: 1.4;
+				padding-bottom: 10px;
+			}
+
 		}
 	}
 }
