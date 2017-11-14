@@ -1,1 +1,41 @@
 @import '../scss/config';
+
+.container {
+	background: #000;
+
+	.inner {
+		position: relative;
+		height: 104px;
+		margin: 0 60px;
+
+		.logo-container {
+			@include absoluteTopLeft();
+			height: 100%;
+			display: flex;
+			align-items: center;
+
+			.logo {
+				width: 204px;
+				height: 65px;
+				background: url('../assets/images/logo_white@3x.png');
+				background-size: 204px;
+			}
+		}
+
+		.nav-container {
+			@include absoluteTopRight();
+			height: 100%;
+			display: flex;
+			align-items: center;
+
+			.nav-item {
+				@include gothic-bold();
+				font-size: 14px;
+				color: #fff;
+				text-transform: uppercase;
+				padding-right: 40px;
+			}
+
+		}
+	}	
+}

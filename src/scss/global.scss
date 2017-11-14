@@ -2,7 +2,7 @@
 // Put your global html, body, font imports, etc. here.
 
 // Compass reset
-@import 'compass/reset';
+// @import 'compass/reset';
 
 // Import all style stuff
 @import 'config';
@@ -47,7 +47,7 @@
       cursor: grabbing;
     }
 
-    @include knowledge-regular;
+    @include gothic-regular;
     font-size: 62.5%;
 
     -moz-osx-font-smoothing: grayscale;
@@ -86,8 +86,8 @@
     background-color: transparent;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
-    @include user-select('none');
-    @include appearance(none);
+    /* @include user-select('none'); */
+    /* @include appearance(none); */
     cursor: pointer;
     font-size: inherit;
   }

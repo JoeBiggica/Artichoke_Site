@@ -1,0 +1,24 @@
+@import '../../scss/config';
+
+.container {
+
+	.banner {
+		position: relative;
+		width: 100%;
+		height: 490px;
+		background: url('../../assets/images/Artichoke_Background.png') no-repeat center center;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		align-items: center;		
+		justify-content: center;
+
+		.banner-text {
+			display: block;
+			@include gothic-bold();
+			font-size: 72px;
+			color: #fff;
+			text-shadow: 4px 4px 4px #000;
+		}
+	}
+}

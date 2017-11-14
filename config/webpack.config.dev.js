@@ -85,6 +85,7 @@ module.exports = {
     // `web` extension prefixes have been added for better support
     // for React Native Web.
     extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx', '.scss'],
+    symlinks: false,
     alias: {
       
       // Support React Native Web
@@ -167,7 +168,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   modules: 1,
-                  localIdentName: "[name]__[local]___[hash:base64:5]"  
+                  localIdentName: "[name]_[local]_[hash:base64:5]"  
                 },
               },{
                 loader: require.resolve('postcss-loader'),

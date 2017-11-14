@@ -1,25 +1,25 @@
-@mixin knowledge-light {
-	font-family: $knowledge-light;
+@mixin gothic-light {
+	font-family: Century Gothic;
 	-webkit-font-smoothing: antialiased;
 }
 
-@mixin knowledge-regular {
-	font-family: $knowledge-regular;
+@mixin gothic-regular {
+	font-family: Century Gothic;
 	-webkit-font-smoothing: antialiased;
 }
 
-@mixin knowledge-medium {
-	font-family: $knowledge-medium;
+@mixin gothic-bold {
+	font-family: Century Gothic;
 	-webkit-font-smoothing: antialiased;
-	@include font-weight-override;
+	font-weight: bold
 }
 
 @mixin serif-regular {
-	font-family: $serif-regular;
+	font-family: Century Gothic;
 	-webkit-font-smoothing: antialiased;
 }
 
 @mixin serif-medium {
-	font-family: $serif-medium;
+	font-family: Century Gothic;
 	-webkit-font-smoothing: antialiased;
 }
