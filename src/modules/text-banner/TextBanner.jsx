@@ -6,7 +6,7 @@ export default class TextBanner extends Component {
 
 
 	render() {
-		const { background, title, text, centered, button, small_text } = this.props;
+		const { background, title, text, centered, button, small_text, image } = this.props;
 
 		const container_classname = styles('container', {
 			'green': background == 'green'
@@ -23,6 +23,7 @@ export default class TextBanner extends Component {
 		const text_classname = styles('text', {
 			'small': small_text
 		});
+		console.log('image', image)
 		return(
 			<div className={container_classname}>
 				<div className={content_classname}>
@@ -31,6 +32,7 @@ export default class TextBanner extends Component {
 						{ text && <h4 className={text_classname}>{text}</h4> }
 					</div>
 					{ button && <span className={styles('button')}>{button.text}</span> }
+					{ image && <div className={styles('image')}><img src={`${image}`} /></div> }
 				</div>
 			</div>
 		)

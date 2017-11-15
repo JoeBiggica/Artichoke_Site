@@ -1,5 +1,6 @@
 @mixin grey-green-button {
 	@include gothic-bold;
+	color: #000;
 	font-size: 16px;
 	background: $background-grey;
 	padding: 4px 6px;
@@ -16,6 +17,7 @@
 
 @mixin grey-black-button {
 	@include gothic-bold;
+	color: #000;
 	font-size: 16px;
 	background: $background-grey;
 	padding: 4px 6px;

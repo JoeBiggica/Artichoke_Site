@@ -11,6 +11,10 @@ import header_styles from './header/Header.scss'
 import './scss/global.scss';
 
 export default class App extends Component {
+	state = {
+		current_page: 'home'
+	}
+	
 	renderHeader() {
 		return (
 			<div>
