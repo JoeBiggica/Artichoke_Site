@@ -1,0 +1,31 @@
+@mixin grey-green-button {
+	@include gothic-bold;
+	font-size: 16px;
+	background: $background-grey;
+	padding: 4px 6px;
+	border-bottom: 3px solid $artichoke-green;
+	cursor: pointer;
+	transition: all .35s $easeOutExpo;
+
+	&:hover {
+		color: #fff;
+		background: $artichoke-green;
+		border-bottom: 3px solid $background-grey;
+	}
+}
+
+@mixin grey-black-button {
+	@include gothic-bold;
+	font-size: 16px;
+	background: $background-grey;
+	padding: 4px 6px;
+	border-bottom: 3px solid #000;
+	cursor: pointer;
+	transition: all .35s $easeOutExpo;
+
+	&:hover {
+		color: #fff;
+		background: #000;
+		border-bottom: 3px solid $background-grey;
+	}
+}
