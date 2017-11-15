@@ -213,6 +213,25 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+          {
+            test: /\.svg$/,
+            exclude: /node_modules/,
+            loader: 'svg-react-loader',
+            query: {
+              classIdPrefix: '[name]-[hash:8]__',
+              filters: [
+                  function (value) {
+                      // ...
+                      this.update(newvalue);
+                  }
+              ],
+              propsMap: {
+                  fillRule: 'fill-rule',
+                  foo: 'bar'
+              },
+              xmlnsTest: /^xmlns.*$/
+            }
+          }
         ],
       },
       // ** STOP ** Are you adding a new loader?

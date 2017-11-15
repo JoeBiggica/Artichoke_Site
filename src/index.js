@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
 
+import Header from './header';
+import Footer from './footer';
 import Home from './pages/home';
-import Subpage from './components/Subpage';
-import Header from './header'
+import About from './pages/about';
 import header_styles from './header/Header.scss'
 
 import './scss/global.scss';
@@ -37,8 +38,9 @@ export default class App extends Component {
 					</Header>
 					<Switch>
 						<Route path='/' exact component={Home} />
-						<Route path='/about' exact component={Subpage} />
+						<Route path='/about' exact component={About} />
 					</Switch>
+					<Footer />
 				</div>
 			</BrowserRouter>
 		)

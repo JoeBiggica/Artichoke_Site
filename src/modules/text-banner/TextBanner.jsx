@@ -6,7 +6,7 @@ export default class TextBanner extends Component {
 
 
 	render() {
-		const { background, title, text, centered, button } = this.props;
+		const { background, title, text, centered, button, small_text } = this.props;
 
 		const container_classname = styles('container', {
 			'green': background == 'green'
@@ -19,12 +19,16 @@ export default class TextBanner extends Component {
 		const copy_classname = styles('copy', {
 			'center': centered
 		});
+
+		const text_classname = styles('text', {
+			'small': small_text
+		});
 		return(
 			<div className={container_classname}>
 				<div className={content_classname}>
 					<div className={copy_classname}>
 						{ title && <h2 className={styles('title')}>{title}</h2> }
-						{ text && <h4 className={styles('text')}>{text}</h4> }
+						{ text && <h4 className={text_classname}>{text}</h4> }
 					</div>
 					{ button && <span className={styles('button')}>{button.text}</span> }
 				</div>

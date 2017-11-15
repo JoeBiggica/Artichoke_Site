@@ -1,0 +1,119 @@
+@import '../../scss/config';
+
+.container {
+
+	.banner {
+		position: relative;
+		width: 100%;
+		padding-top: (490 / 1366) * 100%;
+		background: url('../../assets/images/Artichoke_Background.png') no-repeat center center;
+		background-size: 100%;
+		
+		border-bottom: 1px solid $artichoke-green;
+
+		.inner {
+			@include absoluteFullSize();
+		    display: flex;
+			flex-direction: column;
+			align-items: center;		
+			justify-content: center;
+		}
+
+		.banner-text {
+			display: block;
+			@include gothic-bold;
+			font-size: 72px;
+			color: #fff;
+			text-shadow: 4px 4px 4px #000;
+		}
+	}
+
+	.cards-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 48px 60px;
+
+		.card {
+			width: 50%;
+			align-self: flex-start;
+
+			&:first-child {
+				margin-right: 10px;
+			}
+			
+			.inner {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+
+				.thumb {
+					width: 178px;
+					height: 178px;
+					flex: none;
+					margin-right: 20px;
+
+					&.expertise {
+						background: url('../../assets/images/Expertise_Checkmark.png') no-repeat center center;
+					}
+
+					&.blog-post {
+						background: url('../../assets/images/Expertise_Checkmark.png') no-repeat center center;
+					}
+				}
+
+				.info {
+					
+					.title {
+						@include gothic-bold;
+						font-size: 26px;
+					}
+
+					.description {
+						font-family: arial, sans-serif;
+						font-size: 14px;
+						padding-bottom: 10px;
+					}
+
+					.button {
+						@include grey-green-button;
+					}
+				}	
+			}	
+		}
+	}
+
+	.your-story {
+		padding: 48px 60px;
+		background: $background-grey;
+
+		.inner {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			
+			.thumb {
+				width: 435px;
+				height: 290px;
+				flex: none;
+				margin-right: 30px;
+				background: url('../../assets/images/jean_claude.jpg') no-repeat center center;
+				background-size: cover;
+			}
+
+			.title {
+				@include gothic-bold;
+				font-size: 26px;
+			}
+
+			p {
+				font-family: arial, sans-serif;
+				font-size: 14px;
+				line-height: 1.4;
+				padding-bottom: 10px;
+			}
+
+		}
+	}
+}
