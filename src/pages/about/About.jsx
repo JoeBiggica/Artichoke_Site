@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 import TextBanner from '../../modules/text-banner';
-import image from '../../assets/images/Group_Shot.png'
+import TextCard from '../../modules/text-card';
+import banner_image from '../../assets/images/Group_Shot.png';
+import benci_thumb from '../../assets/images/Benci_Headshot.png';
+import dyer_thumb from '../../assets/images/Dyer_Headshot.png';
 
 import styles from './About.scss';
 
@@ -14,12 +17,43 @@ export default class About extends Component {
 			title: 'The Artichoke Story',
 			text: 'We are Artichoke Designs, two passionate men who love design and want to share it with the world! After meeting in high school and sharing similar interests, we quickly became close friends. With backgrounds in graphic design, business and media, we decided that in late 2014 we should take our passions and turn it into a service. We started out with designing alternative movie posters for some of our favorite films, and learned that others enjoyed our work as well. Once we established a successful Etsy page, we decided it was time to branch out into the world of graphic design and take on all clients in search of that unique look they hadn\'t quite found yet.',
 			small_text: true,
-			image: image
+			image: banner_image
+		}
+
+		const card_one_props = {
+			title: 'Brand Promise',
+			text: 'At Artichoke Designs our mission is to deliver great designs at an affordable price, with extraordinary customer service and collaboration. We value each and every one of our clients and pride ourselves on being able to provide dedicated and committed service. Artichoke Designs offers a wide variety of products and services; whether it’s as detailed as building a marketing campaign from the ground up, or a simple but special invitation for a graduation party.',
+		}
+
+		const card_two_props = {
+			title: 'Our Location',
+			text: 'Based out of Central New Jersey. We can facilitate working with all clients across the country though excellent communication and customer service.',
+		}
+
+		const profile_one_props = {
+			title: 'Steven Benci',
+			text: 'He\'s bad right now.' ,
+			thumb: benci_thumb,
+		}
+
+		const profile_two_props = {
+			title: 'Richard Dyer',
+			text: 'Aside from being a FRAUD of film and design, I also went to BAD school for FAKE NEWSa. My interest in BULLSHIT came from my experience in customer DICK SUCKING and a desire to discover sensible PUSSY. I like to spend my free time coming up with new FRAUDLENT IDEAS, writing FAKE NEWS and of course watching BULLSHIT! Some of my favorites include The Room, Pitch Perfect and the GIMME DA PUSSY BOSS' ,
+			thumb: dyer_thumb,
 		}
 
 		return(
 			<div className={styles('container')}>
 				<TextBanner {...text_banner_props} />
+				<div className={styles('cards-container')}>
+					<div className={styles('about-card-one')}><TextCard {...card_one_props} /></div>
+					<div className={styles('about-card-two')}><TextCard {...card_two_props} /></div>
+				</div>
+
+				<div className={styles('profiles-container')}>
+					<div className={styles('profile-card')}><TextCard {...profile_one_props} /></div>
+					<div className={styles('profile-card')}><TextCard {...profile_two_props} /></div>
+				</div>
 			</div>
 		)
 	}

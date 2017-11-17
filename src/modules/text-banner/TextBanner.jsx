@@ -23,7 +23,7 @@ export default class TextBanner extends Component {
 		const text_classname = styles('text', {
 			'small': small_text
 		});
-		console.log('image', image)
+
 		return(
 			<div className={container_classname}>
 				<div className={content_classname}>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
+import TextCard from '../../modules/text-card';
 import TextBanner from '../../modules/text-banner';
+import expertise_thumb from '../../assets/images/Expertise_Checkmark.png';
+import blog_thumb from '../../assets/images/jean_claude.jpg'
 
 import styles from './Home.scss';
 
@@ -18,6 +21,22 @@ export default class Home extends Component {
 			}
 		}
 
+		const card_one_props = {
+			title: 'Areas of Expertise',
+			text: 'We love working with our clients to help them create an engaging and memorable experience through design. We specialize in branding, print design, advertising and photography. Most importantly, we strive to provide unparalleled customer service and transparency.',
+			thumb: expertise_thumb,
+			button: {
+				path: '/expertise',
+				text: 'Learn more'
+			}
+		}
+
+		const card_two_props = {
+			title: 'Blog Spot',
+			text: 'Blog coming soon!',
+			thumb: blog_thumb,
+		}
+
 		return(
 			<div className={styles('container')}>
 				<div className={styles('banner')}>
@@ -27,25 +46,8 @@ export default class Home extends Component {
 					</div>
 				</div>
 				<div className={styles('cards-container')}>
-					<div className={styles('card')}>
-						<div className={styles('inner')}>
-							<div className={styles('thumb','expertise')} />
-							<div className={styles('info')}>
-								<h3 className={styles('title')}>Areas of Expertise</h3>
-								<p className={styles('description')}>We love working with our clients to help them create an engaging and memorable experience through design. We specialize in branding, print design, advertising and photography. Most importantly, we strive to provide unparalleled customer service and transparency.</p>
-								<span className={styles('button')}>Learn More</span>
-							</div>
-						</div>
-					</div>
-					<div className={styles('card')}>
-						<div className={styles('inner')}>
-							<div className={styles('thumb','blog-post')} />
-							<div className={styles('info')}>
-								<h3 className={styles('title')}>Blog Spot</h3>
-								<p className={styles('description')}>Blog coming soon!</p>
-							</div>
-						</div>
-					</div>
+					<div className={styles('card')}><TextCard {...card_one_props} /></div>
+					<div className={styles('card')}><TextCard {...card_two_props} /></div>
 				</div>
 				<div className={styles('your-story')}>
 					<div className={styles('inner')}>
