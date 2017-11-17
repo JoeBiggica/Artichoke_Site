@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
+import { Route, HashRouter, Link, Switch } from 'react-router-dom';
 
 import Header from './header';
 import Footer from './footer';
@@ -36,7 +36,7 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<div>
 					<Header>
 						{ this.renderHeader() }
@@ -48,7 +48,7 @@ export default class App extends Component {
 					</Switch>
 					<Footer />
 				</div>
-			</BrowserRouter>
+			</HashRouter>
 		)
 	}
 }

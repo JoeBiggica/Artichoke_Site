@@ -19,7 +19,7 @@ export default class TextCard extends Component {
 					<div className={styles('info')}>
 						<h3 className={styles('title')}>{title}</h3>
 						<p className={styles('text')}>{text}</p>
-						{ button && <span className={styles('button')}>{button.text}</span> }
+						{ button && <span className={styles('button')}><a href={button.path}>{button.text}</a></span> }
 					</div>
 				</div>
 			</div>
