@@ -14,10 +14,9 @@ export default class Expertise extends Component {
 	render() {
 		const text_banner_props = {
 			background: 'green',
-			title: 'None',
-			text: 'Because at Artichoke, we\'re bad.',
+			title: 'Area of Expertise',
+			text: 'We love working with our clients to help them create an engaging and memorable experience through design. We specialize in branding, print design, advertising and photography. Most importantly, we strive to provide unparalleled customer service and transparency.',
 			small_text: true,
-			image: banner_image
 		}
 
 		const card_one_props = {

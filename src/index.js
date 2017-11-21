@@ -22,26 +22,53 @@ export default class App extends Component {
 	renderHeader() {
 		return (
 			<div>
-				<div className={header_styles('logo-container')}>
+				<div className={header_styles('logo-container')} key='logo'>
 					<Link to='/'>
 						<div className={header_styles('logo')} />
 					</Link>
 				</div>
-				<div className={header_styles('nav-container')}>
-
-					<Link to='/about'>
-						<div className={header_styles('nav-item')}>About</div>
-					</Link>
-					<Link to='/expertise'>
-						<div className={header_styles('nav-item')}>Expertise</div>
-					</Link>
-					<div className={header_styles('nav-item')}>Contact Us</div>
+				<div className={header_styles('nav-container')} key='nav'>
+					<div className={header_styles('nav-item')}>
+						<Link to='/about'>About</Link>
+					</div>
+					<div className={header_styles('nav-item')}>
+						<Link to='/expertise'>Expertise</Link>
+					</div>
+					<div className={header_styles('nav-item')}>
+						<Link to='/expertise'>Contact Us</Link>
+					</div>
 				</div>
 			</div>
 		);
 	}
 
 	render() {
+		const header_props = {
+			logo: {
+				path: '/'
+			},
+			nav_items: [
+				{
+					about: {
+						name: 'About',
+						path: '/about',
+					}
+				},
+				{
+					expertise: {
+						name: 'Expertise',
+						path: '/expertise',
+					}
+				},
+				{
+					contact: {
+						name: 'Contact Us',
+						path: '/contact-us'
+					}
+				}		
+			]
+		}
+
 		return (
 			<HashRouter>
 				<div>

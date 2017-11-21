@@ -6,36 +6,132 @@
 	.inner {
 		position: relative;
 		height: 104px;
-		margin: 0 60px;
+		margin: 0 $screen-edge-large;
 
-		.logo-container {
-			@include absoluteTopLeft();
-			height: 100%;
-			display: flex;
-			align-items: center;
+		@include breakpoint($narrow-browser-and-phone) {
+			height: 70px;
+			margin: 0 $screen-edge-small;
+		}
 
-			.logo {
-				width: 204px;
-				height: 65px;
-				background: url('../assets/images/logo_white@3x.png');
-				background-size: 204px;
+		.main {
+			.logo-container {
+				@include absoluteTopLeft();
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				.logo {
+					width: 204px;
+					height: 65px;
+					background: url('../assets/images/logo_white@3x.png');
+					background-size: 204px;
+				}
+			}
+
+			.nav-container {
+				@include absoluteTopRight();
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				.nav-item {
+					@include gothic-bold;
+					font-size: 14px;
+					color: #fff;
+					text-transform: uppercase;
+					padding-right: 40px;
+
+					&:last-child {
+						padding-right: 0;
+					}
+				}
+			}
+
+			@include breakpoint($narrow-browser-and-phone) {
+				display: none;
 			}
 		}
 
-		.nav-container {
-			@include absoluteTopRight();
-			height: 100%;
-			display: flex;
-			align-items: center;
+		.mini {
+			display: none;
 
-			.nav-item {
-				@include gothic-bold;
-				font-size: 14px;
-				color: #fff;
-				text-transform: uppercase;
-				padding-right: 40px;
+			@include breakpoint($narrow-browser-and-phone) {
+				display: block;
 			}
 
+			.logo-container {
+				@include absoluteTopLeft();
+				height: 100%;
+				display: flex;
+				align-items: center;
+				z-index: 3;
+
+				.logo {
+					width: 140px;
+				    height: 44px;
+				    background: url(/static/media/logo_white@3x.be9d5979.png);
+				    background-size: 140px;
+				}
+			}
+
+			.nav-button {
+				@include absoluteTopRight();
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				cursor: pointer;
+				z-index: 3;
+
+				.button-bar {
+					height: 1px;
+					width: 20px;
+					background: #fff;
+					transition: all .35s $principleDefaultEase;
+
+					&:first-child {
+						margin-bottom: 8px;
+					}
+				}
+
+				&.active {
+					.button-bar:first-child {
+						transform: rotate(45deg) translate(3px, 5px);
+					}
+					.button-bar:last-child {
+						transform: rotate(-45deg) translate(2px, -3px);
+					}
+				}
+
+				&:active {
+					.button-bar {
+						background: $artichoke-green;;
+					}
+					
+				}
+
+			}
+
+			.nav-container {
+				@include fixedFullSize();
+				background: #000;
+				display: flex;
+				align-items: flex-start;
+			    justify-content: flex-start;
+			    flex-direction: column;
+			    padding: 30% $screen-edge-small;
+				z-index: 2;
+				transition: all .35s $principleDefaultEase;
+
+				.nav-item {
+					@include gothic-bold;
+					font-size: 14px;
+					color: #fff;
+					text-transform: uppercase;
+					margin-bottom: 10px;
+				}
+			}
 		}
-	}	
+	}
 }

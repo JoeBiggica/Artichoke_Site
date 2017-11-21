@@ -1,7 +1,7 @@
 @import '../../scss/config';
 
 .container {
-	padding: 0 60px;
+	padding: 0 $screen-edge-large;
 
 	&.green {
 		background: url('../../assets/images/Green_Pattern.png') no-repeat center;
@@ -16,7 +16,7 @@
 		align-items: center;
 
 		&.center {
-			padding: 40px 350px;
+			padding: 40px $screen-edge-large;
 		}
 
 		.copy {

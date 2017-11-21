@@ -40,7 +40,7 @@
 			}
 
 			@include breakpoint($narrow-browser-and-phone) {
-				font-size: 26px;
+				font-size: 28px;
 			}
 		}
 	}
@@ -50,7 +50,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		padding: 48px 60px;
+		padding: 48px $screen-edge-large;
 
 		.card {
 			width: 50%;
@@ -63,7 +63,7 @@
 	}
 
 	.your-story {
-		padding: 48px 60px;
+		padding: 48px $screen-edge-large;
 		background: $background-grey;
 
 		.inner {

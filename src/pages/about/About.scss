@@ -4,7 +4,7 @@
 
 	.cards-container,
 	.profiles-container {
-		padding: $y-space-large 60px;
+		padding: $y-space-large $screen-edge-large;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
