@@ -8,8 +8,16 @@
 		padding-top: (490 / 1366) * 100%;
 		background: url('../../assets/images/Artichoke_Background.png') no-repeat center center;
 		background-size: 100%;
-		
 		border-bottom: 1px solid $artichoke-green;
+
+		@include breakpoint($medium-browser-and-portrait-tablet) {
+
+		}
+
+		@include breakpoint($narrow-browser-and-phone) {
+			padding-top: 65%;
+			background-size: cover;
+		}
 
 		.inner {
 			@include absoluteFullSize();
@@ -25,6 +33,15 @@
 			font-size: 76px;
 			color: #fff;
 			text-shadow: 4px 4px 4px #000;
+			text-align: center;
+
+			@include breakpoint($medium-browser-and-portrait-tablet) {
+				font-size: 36px;
+			}
+
+			@include breakpoint($narrow-browser-and-phone) {
+				font-size: 26px;
+			}
 		}
 	}
 

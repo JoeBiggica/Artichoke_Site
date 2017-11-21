@@ -16,6 +16,9 @@ export default class App extends Component {
 		current_page: 'home'
 	}
 
+	navClick() {
+
+	}
 	renderHeader() {
 		return (
 			<div>
@@ -26,8 +29,12 @@ export default class App extends Component {
 				</div>
 				<div className={header_styles('nav-container')}>
 
-					<div className={header_styles('nav-item')}><Link to='/about'>About</Link></div>
-					<div className={header_styles('nav-item')}><Link to='/expertise'>Expertise</Link></div>
+					<Link to='/about'>
+						<div className={header_styles('nav-item')}>About</div>
+					</Link>
+					<Link to='/expertise'>
+						<div className={header_styles('nav-item')}>Expertise</div>
+					</Link>
 					<div className={header_styles('nav-item')}>Contact Us</div>
 				</div>
 			</div>

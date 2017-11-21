@@ -26,7 +26,7 @@ export default class Home extends Component {
 			text: 'We love working with our clients to help them create an engaging and memorable experience through design. We specialize in branding, print design, advertising and photography. Most importantly, we strive to provide unparalleled customer service and transparency.',
 			thumb: expertise_thumb,
 			button: {
-				path: '/expertise',
+				path: '/#/expertise',
 				text: 'Learn more'
 			}
 		}
@@ -41,8 +41,8 @@ export default class Home extends Component {
 			<div className={styles('container')}>
 				<div className={styles('banner')}>
 					<div className={styles('inner')}>
-						<span className={styles('banner-text')}>We Handle the Johns,</span>
-						<span className={styles('banner-text')}>You Enjoy the Boyegas</span>
+						<span className={styles('banner-text')}>We Handle the Layers,</span>
+						<span className={styles('banner-text')}>You Enjoy the Heart</span>
 					</div>
 				</div>
 				<div className={styles('cards-container')}>

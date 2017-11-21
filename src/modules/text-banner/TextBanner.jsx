@@ -4,7 +4,6 @@ import styles from './TextBanner.scss';
 
 export default class TextBanner extends Component {
 
-
 	render() {
 		const { background, title, text, centered, button, small_text, image } = this.props;
 
