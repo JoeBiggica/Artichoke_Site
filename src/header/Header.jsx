@@ -7,13 +7,15 @@ import styles from './Header.scss';
 export default class Header extends Component {
 
 	state = {
-		nav_open: false
+		nav_open: false,
+		current_page: null
 	}
 
 	constructor(props) {
 		super(props);
 
 		this.toggleNav = this.toggleNav.bind(this);
+		this.renderNavItem = this.renderNavItem.bind(this);
 		this.renderMiniNavItem = this.renderMiniNavItem.bind(this);
 	}
 
@@ -23,16 +25,26 @@ export default class Header extends Component {
 		})
 	}
 
+	renderNavItem(item) {
+		return (
+			<div className={styles('nav-item')} key={`nav-${item.name}`}>
+				<a href={item.path}>{item.name}</a>
+			</div>
+		);
+	}
+
 	renderMiniNavItem(item) {
 		return (
-			<div onClick={this.toggleNav}>{item}</div>
-		)
+			<div className={styles('nav-item')} key={`nav-${item.name}`} onClick={this.toggleNav}>
+				<a href={item.path}>{item.name}</a>
+			</div>
+		);
 	}
 
 	render() {
-		const logo = find(this.props.children.props.children, child => { return child.key == 'logo'; });
-		const nav = find(this.props.children.props.children, child => { return child.key == 'nav'; });
-		console.log(nav.props.children)
+		const logo = this.props.logo;
+		const nav_items = this.props.nav_items;
+
 		const button_classname = styles('nav-button', {
 			'active': this.state.nav_open
 		})
@@ -41,17 +53,24 @@ export default class Header extends Component {
 			<div className={styles('container')}>
 				<div className={styles('inner')}>
 					<div className={styles('main')}>
-						{ this.props.children }
+						<div className={styles('logo-container')}>
+							<a href='/'><div className={styles('logo')} /></a>
+						</div>
+						<div className={styles('nav-container')}>
+							{ nav_items.map(this.renderNavItem) }
+						</div>
 					</div>
 					<div className={styles('mini')}>
-						{ logo }
+						<div className={styles('logo-container')}>
+							<a href='/'><div className={styles('logo')} /></a>
+						</div>
 						<div className={button_classname} onClick={this.toggleNav}>
 							<span className={styles('button-bar')}></span>
 							<span className={styles('button-bar')}></span>
 						</div>
 						{ this.state.nav_open && 
 							<div className={styles('nav-container')}>
-								{ nav.props.children.map(this.renderMiniNavItem) }
+								{ nav_items.map(this.renderMiniNavItem) }
 							</div>
 						}
 						
