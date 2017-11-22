@@ -7,6 +7,7 @@ import Footer from './footer';
 import Home from './pages/home';
 import About from './pages/about';
 import Expertise from './pages/expertise';
+import Contact from './pages/contact';
 import header_styles from './header/Header.scss'
 
 import './scss/global.scss';

@@ -95,4 +95,8 @@
     cursor: pointer;
     font-size: inherit;
   }
+
+  input,textarea {
+    outline: none;
+  }
 }

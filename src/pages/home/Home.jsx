@@ -16,7 +16,7 @@ export default class Home extends Component {
 			text: 'Come see what we have to offer and let us reveal the heart of your business.',
 			centered: true,
 			button: {
-				path: '/contact-us',
+				path: '/#/contact',
 				text: 'Let\'s work together'
 			}
 		}
