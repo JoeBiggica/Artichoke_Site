@@ -16,6 +16,23 @@
 		.about-card-two {
 			width: 35%;
 		}
+
+		@include breakpoint($portrait-tablet-and-below) {
+			flex-direction: column;
+
+			.about-card-one,
+			.about-card-two {
+				width: 100%;
+
+				&:first-child {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		@include breakpoint($narrow-browser-and-phone) {
+			padding: $y-space-small $screen-edge-small;
+		}
 	}
 
 	.profiles-container {
@@ -27,6 +44,14 @@
 
 			&:first-child {
 				margin-right: 20px;
+			}
+
+			@include breakpoint($portrait-tablet-and-below) {
+				width: 100%;
+
+				&:first-child {
+					margin: 0 0 20px;
+				}
 			}
 		}
 	}

@@ -35,7 +35,7 @@ export default class App extends Component {
 						<Link to='/expertise'>Expertise</Link>
 					</div>
 					<div className={header_styles('nav-item')}>
-						<Link to='/expertise'>Contact Us</Link>
+						<Link to='/contact'>Contact Us</Link>
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@ export default class App extends Component {
 				{
 					contact: {
 						name: 'Contact Us',
-						path: '/contact-us'
+						path: '/contact'
 					}
 				}		
 			]
@@ -79,6 +79,7 @@ export default class App extends Component {
 						<Route path='/' exact component={Home} />
 						<Route path='/about' exact component={About} />
 						<Route path='/expertise' exact component={Expertise} />
+						<Route path='/contact' exact component={Contact} />
 					</Switch>
 					<Footer />
 				</div>

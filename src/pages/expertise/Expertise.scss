@@ -2,32 +2,34 @@
 
 .container {
 
-	.cards-container,
-	.profiles-container {
-		padding: $y-space-large $screen-edge-large;
+	.cards-container {
 		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: $y-space-large $screen-edge-large;
 
-		.about-card-one {
-			width: 60%;
-		}
-
-		.about-card-two {
-			width: 35%;
-		}
-	}
-
-	.profiles-container {
-		background: $background-grey;
-
-		.profile-card {
+		.card {
 			width: 50%;
 			align-self: flex-start;
 
 			&:first-child {
 				margin-right: 20px;
 			}
+		}
+
+		@include breakpoint($portrait-tablet-and-below) {
+			flex-direction: column;
+
+			.card {
+				width: 100%;
+				margin: 0 0 30px;
+
+			}
+		}
+
+		@include breakpoint($narrow-browser-and-phone) {
+			padding: $y-space-small $screen-edge-small;
 		}
 	}
 }

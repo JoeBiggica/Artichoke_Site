@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import TextBanner from '../../modules/text-banner';
 import TextCard from '../../modules/text-card';
 import banner_image from '../../assets/images/Group_Shot.png';
-import benci_thumb from '../../assets/images/Benci_Headshot.png';
-import dyer_thumb from '../../assets/images/Dyer_Headshot.png';
+import branding_thumb from '../../assets/images/Branding_Thumbnail.png';
+import photography_thumb from '../../assets/images/Photography_Thumbnail.png';
+import print_thumb from '../../assets/images/Printdesign_Thumbnail.png';
+import poster_thumb from '../../assets/images/Fanart_Thumbnail.png';
 
 import styles from './Expertise.scss';
 
@@ -20,13 +22,31 @@ export default class Expertise extends Component {
 		}
 
 		const card_one_props = {
-			title: 'Brand Promise',
-			text: 'At Artichoke Designs our mission is to deliver great designs at an affordable price, with extraordinary customer service and collaboration. We value each and every one of our clients and pride ourselves on being able to provide dedicated and committed service. Artichoke Designs offers a wide variety of products and services; whether it’s as detailed as building a marketing campaign from the ground up, or a simple but special invitation for a graduation party.',
+			title: 'Branding',
+			text: '"Your brand is what other people say about you when you\'re not in the room." - Jeff Bezos, Founder and CEO of Amazon. \nYour brand is your business, and a bad brand makes for bad business. We will show our audience that you make for good business, and that they deserve you.',
+			thumb: branding_thumb,
 		}
 
 		const card_two_props = {
-			title: 'Our Location',
-			text: 'Based out of Central New Jersey. We can facilitate working with all clients across the country though excellent communication and customer service.',
+			title: 'Photography',
+			text: 'A picture is worth a thousand words. In this day and age, image is everything. We will capture your good side and let your audience know how good you look...before they even meet you.',
+			thumb: photography_thumb,
+		}
+
+		const card_three_props = {
+			title: 'Print Design',
+			text: 'Make your next flyer be fridge-worthy. Have your business card be a conversation starter. Let your invitation be the talk of the party. We will make sure you always look good on paper.',
+			thumb: print_thumb,
+		}
+
+		const card_four_props = {
+			title: 'Alternative Print Design',
+			text: 'We never lose sight of our roots. Poster design is where we got our start, and we do NOT like bare walls. We can work with you on your original idea and make sure your walls are always dressed with some fine designs.',
+			thumb: poster_thumb,
+			button: {
+				path: 'https://www.etsy.com/shop/TheArtichokeDesigns?ref=hdr_shop_menu',
+				text: 'SHOP'
+			}
 		}
 
 
@@ -34,8 +54,12 @@ export default class Expertise extends Component {
 			<div className={styles('container')}>
 				<TextBanner {...text_banner_props} />
 				<div className={styles('cards-container')}>
-					<div className={styles('about-card-one')}><TextCard {...card_one_props} /></div>
-					<div className={styles('about-card-two')}><TextCard {...card_two_props} /></div>
+					<div className={styles('card')}><TextCard {...card_one_props} /></div>
+					<div className={styles('card')}><TextCard {...card_two_props} /></div>
+				</div>
+				<div className={styles('cards-container')}>
+					<div className={styles('card')}><TextCard {...card_three_props} /></div>
+					<div className={styles('card')}><TextCard {...card_four_props} /></div>
 				</div>
 			</div>
 		)

@@ -60,20 +60,36 @@
 				margin-right: 20px;
 			}
 		}
+
+		@include breakpoint($portrait-tablet-and-below) {
+			flex-direction: column;
+
+			.card {
+				width: 100%;
+				margin: 0 0 30px;
+
+			}
+		}
+
+		@include breakpoint($narrow-browser-and-phone) {
+			padding: 30px $screen-edge-small;
+		}
 	}
 
 	.your-story {
-		padding: 48px $screen-edge-large;
 		background: $background-grey;
 
 		.inner {
 			display: flex;
 			align-items: flex-start;
 			justify-content: flex-start;
+			padding: 48px $screen-edge-large;
 			
 			.thumb {
-				width: 435px;
-				height: 290px;
+				position: relative;
+				width: 33.7%;
+				height: 0;
+				padding-top: 33.7%;
 				flex: none;
 				margin-right: 30px;
 				background: url('../../assets/images/jean_claude.jpg') no-repeat center center;
@@ -92,6 +108,21 @@
 				padding-bottom: 10px;
 			}
 
+			@include breakpoint($portrait-tablet-and-below) {
+				flex-direction: column;
+
+				.thumb {
+					margin: 0 0 20px;
+					width: 100%;
+					padding-top: 100%;
+				}
+			}
+
+			@include breakpoint($narrow-browser-and-phone) {
+				// align-items: center;
+				// text-align: center;
+				padding: 30px $screen-edge-small;
+			}
 		}
 	}
 }
