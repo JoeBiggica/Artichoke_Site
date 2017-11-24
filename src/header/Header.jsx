@@ -68,11 +68,19 @@ export default class Header extends Component {
 							<span className={styles('button-bar')}></span>
 							<span className={styles('button-bar')}></span>
 						</div>
-						{ this.state.nav_open && 
-							<div className={styles('nav-container')}>
-								{ nav_items.map(this.renderMiniNavItem) }
-							</div>
-						}
+						<CSSTransitionGroup
+							transitionName={'nav-container'}
+							transitionEnterTimeout={800}
+							transitionLeave={false}
+						>
+							{ this.state.nav_open && 
+								
+								<div className={styles('nav-container')}>
+									{ nav_items.map(this.renderMiniNavItem) }
+								</div>
+								
+							}
+						</CSSTransitionGroup>
 						
 					</div>
 				</div>
