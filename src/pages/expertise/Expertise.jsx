@@ -56,8 +56,6 @@ export default class Expertise extends Component {
 				<div className={styles('cards-container')}>
 					<div className={styles('card')}><TextCard {...card_one_props} /></div>
 					<div className={styles('card')}><TextCard {...card_two_props} /></div>
-				</div>
-				<div className={styles('cards-container')}>
 					<div className={styles('card')}><TextCard {...card_three_props} /></div>
 					<div className={styles('card')}><TextCard {...card_four_props} /></div>
 				</div>

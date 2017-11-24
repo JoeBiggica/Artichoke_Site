@@ -7,13 +7,15 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 		padding: $y-space-large $screen-edge-large;
 
 		.card {
-			width: 50%;
+			width: 48%;
 			align-self: flex-start;
+			margin-bottom: 20px;
 
-			&:first-child {
+			&:nth-child(odd) {
 				margin-right: 20px;
 			}
 		}
@@ -23,7 +25,15 @@
 
 			.card {
 				width: 100%;
-				margin: 0 0 30px;
+				margin-bottom: 30px;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 
 			}
 		}
