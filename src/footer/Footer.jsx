@@ -17,7 +17,6 @@ export default class Footer extends Component {
 				<span className={styles('copyright')}>{copyright}</span>
 				<div className={styles('social-contaner')}>
 					<a href='#'>
-						
 					</a>
 				</div>
 			</div>
