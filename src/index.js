@@ -12,7 +12,7 @@ import Contact from './pages/contact';
 import './scss/global.scss';
 
 export default class App extends Component {
-	
+
 	render() {
 		const header_props = {
 			logo: {

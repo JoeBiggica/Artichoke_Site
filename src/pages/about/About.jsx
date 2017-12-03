@@ -33,7 +33,7 @@ export default class About extends Component {
 		const profile_one_props = {
 			title: 'Steven Benci',
 			subtitle: 'Co-Founder',
-			text: 'He\'s bad right now.' ,
+			text: 'I have always been interested in the endless possibilities of design and the experience of sharing my hard work with the world. I am always looking to expand my knowledge beyond what I have learned in school and make it a point to stay on top of current trends in this ever-changing field. On a personal level I enjoy passing the time with a good video game and spending time with friends and family.' ,
 			thumb: benci_thumb,
 		}
 

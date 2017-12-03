@@ -19,6 +19,10 @@ export default class Header extends Component {
 		this.renderMiniNavItem = this.renderMiniNavItem.bind(this);
 	}
 
+	componentDidUpdate() {
+		window.scrollTo(0,0)
+	}
+
 	toggleNav() {
 		this.setState({
 			nav_open: !this.state.nav_open
