@@ -8,7 +8,7 @@ export default class Header extends Component {
 
 	state = {
 		nav_open: false,
-		current_page: null
+		current_page: this.props.current_page
 	}
 
 	constructor(props) {
@@ -26,9 +26,14 @@ export default class Header extends Component {
 	}
 
 	renderNavItem(item) {
+
+		const item_classname = styles('nav-item', {
+			'active': this.state.current_page == item.path
+		});
 		return (
-			<div className={styles('nav-item')} key={`nav-${item.name}`}>
+			<div className={item_classname} key={`nav-${item.name}`} onClick={() => this.setState({current_page: item.path})}>
 				<a href={item.path}>{item.name}</a>
+				<div className={styles('underline')} />
 			</div>
 		);
 	}

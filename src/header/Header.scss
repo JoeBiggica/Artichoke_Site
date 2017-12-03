@@ -44,6 +44,26 @@
 					&:last-child {
 						padding-right: 0;
 					}
+
+					.underline {
+						width: 0;
+					    height: 2px;
+					    margin-top: 2px;
+					    background: $artichoke-green;
+					    transition: width .25s $principleDefaultEase;
+					}
+
+					&:hover {
+						.underline {
+							width: 100%;
+						}
+					}
+
+					&.active {
+						.underline {
+							width: 100%;
+						}
+					}
 				}
 			}
 
@@ -106,7 +126,7 @@
 
 				&:active {
 					.button-bar {
-						background: $artichoke-green;;
+						background: $artichoke-green;
 					}					
 				}
 			}
