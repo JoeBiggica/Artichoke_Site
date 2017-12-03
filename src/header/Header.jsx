@@ -70,7 +70,7 @@ export default class Header extends Component {
 						</div>
 						<CSSTransitionGroup
 							transitionName={'nav-container'}
-							transitionEnterTimeout={800}
+							transitionEnterTimeout={500}
 							transitionLeave={false}
 						>
 							{ this.state.nav_open && 

@@ -13,6 +13,23 @@ import styles from './Contact.scss';
 
 export default class Contact extends Component {
 
+	constructor(props) {
+		super(props);
+	}
+
+	componentDidMount() {
+		const self = this;
+		const mail_link_base = this.refs['mail-link'].href;
+
+		this.refs['contact-body'].addEventListener('keyup', function() {
+			let mail_from = '%0AFrom,%0A' + self.refs['name'].value;
+			let body_value = encodeURIComponent(this.value);
+			const mail_link = document.getElementById('mail-link');
+			mail_link.href = mail_link_base + '&body=' + body_value + mail_from;	
+		})
+	}
+
+
 	render() {
 		const text_banner_props = {
 			background: 'green',
@@ -24,31 +41,31 @@ export default class Contact extends Component {
 		return(
 			<div className={styles('container')}>
 				<TextBanner {...text_banner_props} />
-				
 				<div className={styles('form-container')}>
-					<form action='mailto:theartichokedesigns@gmail.com?subject=Inquiry from the Artichoke Designs Website' method='post' enctype='text/plain'>
+					<div className={styles('form')}>
 						<div className={styles('info')}>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>Name</h3>
-								<input type='text' name='name' placeholder='Jan Michael Vincent' />
+								<input type='text' placeholder='Jan Michael Vincent' ref='name' />
 							</div>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>Email Address</h3>
-								<input type='text' name='mail' placeholder='michael_down@vincent.com' />
+								<input type='text' placeholder='michael_down@vincent.com' />
 							</div>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>How did you hear about us?</h3>
-								<input type='text' name='mail' placeholder='Google, Facebook, Instagram, etc.' />
+								<input type='text' placeholder='Google, Facebook, Instagram, etc.' />
 							</div>
 
 						</div>
 						<div className={styles('body')}>
 							<h3 className={styles('title')}>How can we help you?</h3>
-							<textarea />
-							<input className={styles('button')} type="submit" value="Submit" />
+							<textarea ref='contact-body' name='message'/>
+							<a id='mail-link' ref='mail-link' className={styles('button')} href="mailto:theartichokedesigns@gmail.com?subject=Inquiry from the Artichoke Designs Site">
+								Submit
+							</a>
 						</div>
-						
-					</form>
+					</div>
 				</div>
 			</div>
 		)
