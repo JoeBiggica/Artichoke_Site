@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import TextCard from '../../modules/text-card';
 import TextBanner from '../../modules/text-banner';
 import expertise_thumb from '../../assets/images/Expertise_Checkmark.png';
-import blog_thumb from '../../assets/images/jean_claude.jpg'
+import blog_thumb from '../../assets/images/Blog_Thumb.png'
 
 import styles from './Home.scss';
 

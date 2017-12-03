@@ -7,6 +7,8 @@
 		width: 100%;
 		padding-top: (490 / 1366) * 100%;
 		background: url('../../assets/images/Artichoke_Background.png') no-repeat center center;
+		background-attachment: fixed;
+    	background-position: top;
 		background-size: 100%;
 		border-bottom: 1px solid $artichoke-green;
 
@@ -15,8 +17,9 @@
 		}
 
 		@include breakpoint($narrow-browser-and-phone) {
-			padding-top: 65%;
-			background-size: cover;
+			padding-top: 54%;
+			background-attachment: inherit;
+    		background-position: inherit;
 		}
 
 		.inner {
@@ -92,7 +95,7 @@
 				padding-top: 33.7%;
 				flex: none;
 				margin-right: 30px;
-				background: url('../../assets/images/jean_claude.jpg') no-repeat center center;
+				background: url('../../assets/images/Group_Shot.png') no-repeat center center;
 				background-size: cover;
 			}
 

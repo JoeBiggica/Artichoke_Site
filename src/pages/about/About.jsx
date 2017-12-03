@@ -40,7 +40,7 @@ export default class About extends Component {
 		const profile_two_props = {
 			title: 'Richard Dyer',
 			subtitle: 'Co-Founder',
-			text: 'Aside from being a FRAUD of film and design, I also went to BAD school for FAKE NEWSa. My interest in BULLSHIT came from my experience in customer DICK SUCKING and a desire to discover sensible PUSSY. I like to spend my free time coming up with new FRAUDLENT IDEAS, writing FAKE NEWS and of course watching BULLSHIT! Some of my favorites include The Room, Pitch Perfect and the GIMME DA PUSSY BOSS' ,
+			text: 'Aside from being a lover of film and design, I also went to school for Digital Film. My interest in business came from my experience in customer service and a desire to discover sensible solutions. I like to spend my free time coming up with new ideas, writing and of course watching movies! Some of my favorites include Lord of the Rings, Rocky and the Blues Brothers.' ,
 			thumb: dyer_thumb,
 		}
 
