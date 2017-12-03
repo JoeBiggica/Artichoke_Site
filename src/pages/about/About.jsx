@@ -32,12 +32,14 @@ export default class About extends Component {
 
 		const profile_one_props = {
 			title: 'Steven Benci',
+			subtitle: 'Co-Founder',
 			text: 'He\'s bad right now.' ,
 			thumb: benci_thumb,
 		}
 
 		const profile_two_props = {
 			title: 'Richard Dyer',
+			subtitle: 'Co-Founder',
 			text: 'Aside from being a FRAUD of film and design, I also went to BAD school for FAKE NEWSa. My interest in BULLSHIT came from my experience in customer DICK SUCKING and a desire to discover sensible PUSSY. I like to spend my free time coming up with new FRAUDLENT IDEAS, writing FAKE NEWS and of course watching BULLSHIT! Some of my favorites include The Room, Pitch Perfect and the GIMME DA PUSSY BOSS' ,
 			thumb: dyer_thumb,
 		}

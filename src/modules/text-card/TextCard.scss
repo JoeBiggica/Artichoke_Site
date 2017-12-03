@@ -19,6 +19,12 @@
 			.title {
 				@include gothic-bold;
 				font-size: 28px;
+				margin-bottom: 8px;
+			}
+
+			.subtitle {
+				font-family: arial, sans-serif;
+				font-size: 16px;
 				margin-bottom: 10px;
 			}
 

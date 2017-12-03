@@ -6,7 +6,7 @@ export default class TextCard extends Component {
 
 
 	render() {
-		const { thumb, title, text, centered, button } = this.props;
+		const { thumb, title, subtitle, text, centered, button } = this.props;
 
 		return(
 			<div className={styles('container')}>
@@ -18,6 +18,7 @@ export default class TextCard extends Component {
 					}
 					<div className={styles('info')}>
 						<h3 className={styles('title')}>{title}</h3>
+						{ subtitle && <p className={styles('subtitle')}>{subtitle}</p> }
 						<p className={styles('text')}>{text}</p>
 						{ button && <span className={styles('button')}><a href={button.path}>{button.text}</a></span> }
 					</div>
