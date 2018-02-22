@@ -154,20 +154,20 @@
 }
 :global {
 	.nav-container-enter {
-		transform: translateY(-100vh);
+		opacity: 0;
 	}
 
 	.nav-container-enter.nav-container-enter-active {
-		transform: translateY(0);
-		transition: transform .5s $principleDefaultEase;
+		opacity: 1;
+		transition: opacity .5s $principleDefaultEase;
 	}
 
 	.nav-container-leave.nav-container-leave-active {
-		transform: translateY(-100vh);	
+		opacity: 0;
 	}
 
 	.nav-container-leave {
-		transform: translateY(0);
-		transition: transform .5s $principleDefaultEase;	
+		opacity: 1;
+		transition: opacity .5s $principleDefaultEase;	
 	}
 }

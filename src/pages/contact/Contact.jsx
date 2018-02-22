@@ -46,11 +46,11 @@ export default class Contact extends Component {
 						<div className={styles('info')}>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>Name</h3>
-								<input type='text' placeholder='Jan Michael Vincent' ref='name' />
+								<input type='text' placeholder='John Smith' ref='name' />
 							</div>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>Email Address</h3>
-								<input type='text' placeholder='michael_down@vincent.com' />
+								<input type='text' placeholder='john.smith@gmail.com' />
 							</div>
 							<div className={styles('row')}>
 								<h3 className={styles('title')}>How did you hear about us?</h3>

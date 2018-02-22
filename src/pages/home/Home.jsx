@@ -39,10 +39,12 @@ export default class Home extends Component {
 
 		return(
 			<div className={styles('container')}>
-				<div className={styles('banner')}>
-					<div className={styles('inner')}>
-						<span className={styles('banner-text')}>We Handle the Layers,</span>
-						<span className={styles('banner-text')}>You Enjoy the Heart</span>
+				<div className={styles('banner-container')}>
+					<div className={styles('banner')}>
+						<div className={styles('inner')}>
+							<span className={styles('banner-text')}>We Handle the Layers,</span>
+							<span className={styles('banner-text')}>You Enjoy the Heart</span>
+						</div>
 					</div>
 				</div>
 				<div className={styles('cards-container')}>

@@ -12,6 +12,10 @@
 		background-size: cover;
 		background-attachment: fixed;
 		color: #fff;
+
+		@include breakpoint($narrow-browser-and-phone) {
+			background-attachment: inherit;
+		}
 	}
 
 	.content {

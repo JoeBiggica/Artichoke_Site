@@ -21,6 +21,11 @@ export default class Header extends Component {
 
 	componentDidUpdate() {
 		window.scrollTo(0,0)
+		if (this.state.nav_open) {
+			document.querySelector('html').style.overflow = 'hidden';
+		} else {
+			document.querySelector('html').style.overflow = '';
+		}
 	}
 
 	toggleNav() {
